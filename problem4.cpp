@@ -6,7 +6,7 @@ int main() {
     cin >> n >> x;
     int f = 1;
     int ca = 2;
-    while (ca <= n) {
+    while (ca < n) {
         f++;
         ca += x;
     }

@@ -1,26 +1,32 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int num;
-    cin >> num;
-    for (int i = num; i >= 1; i--) {
-        for (int j = 1; j <= i; j++) {
-            cout << j;
+int main(){
+
+    int n;
+    cin >> n;
+    string s="";
+    string probel ="";
+    for(int i = n; i >= 0; i--){
+        for(int j = 1; j <= i; j++ ){
+            char a = j + 48;
+            s += a;
+            if(j == i){
+                for(int k = 0; k < n-j; k++){
+                    probel+=" ";
+                }
+            }
         }
-        for (int j = i - 1; j >= 1; j--) {
-            cout << j;
+        string reversestr = s;
+        for(long unsigned int l = 0; l < s.length();l++){
+            reversestr[l] = s[s.length()-1-l];
         }
-        for (int j = i; j < num; j++) {
-            cout << " ";
-        }
-        for (int j = i - 1; j >= 1; j--) {
-            cout << j;
-        }
-        for (int j = 1; j <= i; j++) {
-            cout << j;
-        }
-        cout << endl;
+
+        cout << s << probel << probel << reversestr<<"\n";
+        probel = "";
+        s = "";
     }
+
+
     return 0;
 }

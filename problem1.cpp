@@ -6,24 +6,24 @@ int main(){
     int n;
     cin >> n;
     string s="";
-    string probel ="";
+    string p ="";
     for(int i = n; i >= 0; i--){
         for(int j = 1; j <= i; j++ ){
             char a = j + 48;
             s += a;
             if(j == i){
                 for(int k = 0; k < n-j; k++){
-                    probel+=" ";
+                    p+=" ";
                 }
             }
         }
-        string reversestr = s;
+        string rr = s;
         for(long unsigned int l = 0; l < s.length();l++){
-            reversestr[l] = s[s.length()-1-l];
+            rr[l] = s[s.length()-1-l];
         }
 
-        cout << s << probel << probel << reversestr<<"\n";
-        probel = "";
+        cout << s << p << p << rr<<"\n";
+        p = "";
         s = "";
     }
 

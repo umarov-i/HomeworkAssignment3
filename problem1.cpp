@@ -26,7 +26,5 @@ int main(){
         p = "";
         s = "";
     }
-
-
     return 0;
 }
